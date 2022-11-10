@@ -1,0 +1,26 @@
+Action,Data,Expected Result
+Summary,Test Execution with PluginName Plugin,
+Description,"This test case is to check if the PluginName Plugin is working as expected during the actual test execution, and if the values of the enabled channels are displayed correctly in the Data Display",
+,,
+Switch to Channels Page,,1. The Output Channel & all the Input Channels has to be enabled.
+"Configure the following in Output Settings,
+1. Channel Name -> Output_Test
+2. Mode -> AC Voltage
+3. Unit -> V
+4. Voltage -> 3.5
+5. Frequency -> 100
+Enable only the following Measurement Channels,
+1. FirstChannel
+2. FourthChannel
+3. SeventhChannel &
+4. TwelfthChannel",,1. Only 5 Channels will be activated in the Plugin.
+"1. Click on Start Test button
+2. Click Apply & OK in the Meta Data summary window to Start the test execution",,"1. The test execution should be started.
+2. In Data Display Graph view, only 5 channels should be displayed (Output_Channel, FirstChannel,FourthChannel,SeventhChannel and TwelfthChannel)
+3. The Output_Test channel should display a constant value of what is configured in the Plugin (Verify this output from instrument using a DMM or Scope)
+4. The values of FirstChannel,FourthChannel,SeventhChannel and TwelfthChannel should be correct. These parameters should be generated from a known source. When these parameters are varied in source, the variance should be reflected in data display."
+"1. Switch to Data Viewer
+2. Click ""Update Data"" button",,"1. The latest test data will be updated in the Data Viewer graph.
+2. It will have 5 channels, similar to Data Display."
+"1. Click on Stop Test button
+2. Click OK in the Meta Data summary window",,1. Data Viewer will be loaded with the latest test data.

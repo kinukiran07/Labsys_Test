@@ -1,0 +1,15 @@
+Action,Data,Expected Result
+Summary,Duplication of channel name within the PluginName Plugin,
+Description,This test will check if the channel name is already used in the same PluginName plugin or not.,
+,,
+"# Select the page ""channels"" in PluginName(01) Plugin 
+ # Rename the output channel *Output* to *Current* by editing it. ",,"# A pop up will come displaying the channel name is already used in the current plugin and also suggestion will come saying the channel name should be unique.
+ # On clicking Ok button in the pop up the channel name will be reverted back to *Output*."
+# Rename the input channel *TwelfthChannel* to *FourthChannel* by editing it. ,,"# A pop up will come displaying the channel name is already used in the current plugin and also suggestion will come saying the channel name should be unique.
+ # On clicking Ok button in the pop up the channel name will be reverted back to *TwelfthChannel*."
+# Rename the input channel *SecondChannel* to *Output* by editing it.  ,,"# A pop up will come displaying the channel name is already used in the current plugin and also suggestion will come saying the channel name should be unique.
+ # On clicking Ok button in the pop up the channel name will be reverted back to *SecondChannel*."
+# Rename the input channel *FifthChannel* to *OUTPUT* by editing it.  ,,"# A pop up will come displaying the channel name is already used in the current plugin and also suggestion will come saying the channel name should be unique.
+ # On clicking Ok button in the pop up the channel name will be reverted back to *FifthChannel*."
+# Rename the output channel *Output* to *POWER* by editing it.  ,,"# A pop up will come displaying the channel name is already used in the current plugin and also suggestion will come saying the channel name should be unique.
+ # On clicking Ok button in the pop up the channel name will be reverted back to *Output*."

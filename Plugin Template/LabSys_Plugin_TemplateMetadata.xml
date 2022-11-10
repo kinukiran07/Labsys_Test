@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='windows-1252' standalone='yes'?>
+<MetaData>
+<ProjectTemplate>
+    <Title localize="yes">Plugin Template</Title>
+    <MetaDataClass>Scripting/PluginMetaDataObj/PluginMetaDataObj.lvclass</MetaDataClass>
+    <Description localize="yes">Plugin Template with all Rest API's,Framework and UI Frame</Description>
+    <Filters localize="yes">Templates:Desktop</Filters>
+    <Keywords localize="yes">Plugin;Template</Keywords>
+    <LocationPath>Plugin Template</LocationPath>
+    <ProjectPath>../../../../../../SVN_LabSys/labsys_lvcode/LabSys_SourceCode/Plugin Template/Source/Plugin Template.lvproj</ProjectPath>
+    <ListboxImagePath>images/plugin.png</ListboxImagePath>
+    <CustomVIMode>AfterPage2NoUI</CustomVIMode>
+    <CustomVIPath>Scripting/PluginMetaDataObj/PostCopyScripting.vi</CustomVIPath>
+    <SortPriority>000</SortPriority>
+</ProjectTemplate>
+</MetaData>

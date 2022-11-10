@@ -1,0 +1,6 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes Indication While doing functional Test,
+Description,This test case is to check the behavior of unsaved changes indication and set default functionality while doing the functional test in PluginName Plugin,
+,,
+#  In the Test page of PluginName (01) Plugin. click Test,,"# The enabled channels in the  Input setting and its information will display in the Test Result Table.
+ # There should not be any indication of unsaved changes and Set Default button should be disabled."

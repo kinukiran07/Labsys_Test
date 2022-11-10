@@ -1,0 +1,38 @@
+Action,Data,Expected Result
+Summary,Invalid channel name and case sensitive check in PluginName Plugin,
+Description,This test will check if both the input and channel channel names are valid or not also if they are case sensitive are not.,
+,,
+"# Select the page ""channels"" in PluginName(01) Plugin 
+ # Rename the channel name *Output* in the output settings to *1Output*  by editing the control.
+
+ ",,"# A pop will be displaying the channel name should not start with number and also it gives suggestion for a valid name.
+ # On clicking OK in the pop up the channel name will be reverted back to *Output*.
+
+ "
+#  Rename the channel *Output* to *Out*put*.,,"#  A pop will be displaying the channel name is invalid and also it gives suggestion for a valid name.
+ # On clicking OK in the pop up the channel name will be reverted back to *Output*."
+# Make the channel name *Output* as empty [no text in the box] ,,"# A pop will be displaying one or more channel name is empty, suggestion will be coming for a valid channel name
+ # On clikcing ok in the pop up the channel name will be reverted back to *Output.*"
+"# Rename the channel name *FourthChannel* in the input settings to *1FourthChannel*  by editing the control.
+
+ ",,"# A pop will be displaying the channel name should not start with number and also it gives suggestion for a valid name.
+ # On clicking OK in the pop up the channel name will be reverted back to *FourthChannel*.
+
+ "
+#  Rename the channel *SecondChannel* to *Second*Channel*.,,"#  A pop will be displaying the channel name is invalid and also it gives suggestion for a valid name.
+ # On clicking OK in the pop up the channel name will be reverted back to *SecondChannel*."
+# Make the channel name *ThirdChannel* as empty [no text in the box] ,,"# A pop will be displaying  one or more channel name is empty, suggestion will be coming for a valid channel name.
+ # On clikcing ok in the pop up the channel name will be reverted back to *ThirdChannel.*"
+# Edit the channel *Output* to *Output*. [ Same name same case ],,"1.Channel redundancy pop up should *not* be displayed.
+ 2.Channel name should retain  as *Output*
+ 3.PluginName(01) Plugin should *not* be Highlighted with any Unsaved changes notification."
+# Edit the input channel *ThirteenthChannel* to *Thirteenth*Channel*..,," 1.Channel redundancy pop up should *not* be displayed.
+ 2.Channel name should retain  as *ThirteenthChannel*
+ 3.PluginName(01) Plugin should not be Highlighted with any Unsaved changes notification."
+# Edit the channel *Output* to *OutPUT*. [ Same name  Different case],,"1.Channel redundancy pop up should *not* be displayed.
+ 2.Channel name should be replaced to *OutPUT*
+ 3.PluginName(01) Plugin *should be* Highlighted with Unsaved changes notification."
+Save Configuration,,PluginName(01) Plugin should not be Highlighted with any Unsaved changes notification.
+# Edit the input channel *EighthChannel* to *EIGHTCHANNEL*.,,"1.Channel redundancy pop up should *not* be displayed.
+ 2.Channel name should be replaced with *EIGHTCHANNEL*
+ 3.PluginName(01) Plugin should be Highlighted with Unsaved changes notification."

@@ -1,0 +1,59 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes While Importing a Plugin,
+Description ,This test case is to check the behavior of unsaved changes indication and Set Default functionality while importing the PluginName plugin from an existing configuration,
+,,
+"# Click PluginName (01) Plugin and From Menu bar select Favouties and select Export 
+ # Save this as ""PluginNameExport"" (save the path)",,1.A new xml with PluginName (01) is created.
+"# From Menu bar, select Import and select the file ""PluginNameExport"" 
+ # In the pop up select PluginName (01) Plugin and select Add
+ # Select replace in the next pop up.",,"1. A PluginName (01) Plugin will be added replaced and it will be loaded.
+ 2. The PluginName (01) Plugin will be highlighted in Red color with *, indicating the unsaved changes.
+ 3. The Set Default button will be disabled."
+"# Edit the Output settings in Channel page 
+1. Change Channel name Output to VoltageOut 
+2. Change Mode to 'AC Voltage'",,"# The Output channel name will be renamed to VolatageOut. 
+ # The PluginName (01) Plugin will be highlighted in Red color with *, indicating the unsaved changes
+ # The Set Default button will be enabled and Output_Frequency in the Frequency Channel Name .                              "
+"# Edit the Output Channel name 'VoltageOut' to 'Output'
+# Change Mode to 'DC Voltage'",,"# The channel name will be renamed to Output. 
+ # The APM_SP300 Plugin will be highlighted in Red color with *, indicating the unsaved changes.
+ # The Set Default button will be disabled and Output_Frequency."
+"Edit the Input setting 
+1. Uncheck the Select all",,"# All Input channels are Unselected.
+ # The PluginName (01) Plugin will be highlighted in Red color with *, indicating the unsaved changes.
+ # The Set Default button will be enabled. "
+"In Input settings, 
+1. Check the select all",,"# All Channel are checked.
+ # The PluginName (01) Plugin will be highlighted in Red color with *, indicating the unsaved changes.
+ # The Set Default button will be disabled. "
+# Click Save Configuration file button ,,There should not be any indication of unsaved changes and Set Default button should be disabled.
+"# Click PluginName (01) Plugin and Right Click in the configuration tree and select Export 
+ # Save this as ""PluginNameExport"" (save the path)",,1.A new xml with PluginName (01) is created.
+"# Right click in the Configuration tree and select the Import
+#  # In the pop up select PluginName (01) Plugin and select Add
+ # Select AddNew in the next pop up.",,Newly added PluginName (02) will be highlighted with unsaved changes and Set Default will be Disabled.
+"1. Edit the Interface parameter Device IP with the 198.168.1.100, Timeout 3000 in the PluginName (02)
+ ",,PluginName (02) will be highlighted with unsaved changes and Set Default will be Enabled.
+Press Set default Button PluginName (02),,"Interface parameter Device IP will Reverted, and Time out will reverted to 5000"
+"Edit the Output Settings
+1. Change the Channel name 'Output'  to 'Voltageout'
+2. Unit 'V' to 'mV'
+3. Mode 'DC Voltage' to 'AC Voltage'
+4.Change Output Voltage 1 to 2
+
+",,"1. Newly entered parameters have shown.
+2. PluginName (02) will be highlighted with unsaved changes and Set Default will be Enabled."
+"Edit the Input settings
+1. Uncheck the 
+SecondChannel,
+ThirdChannel,
+FourthChannel
+2. Edit the TwelfthChannel name to PowerInput
+3. Edit the Refresh time to 2000
+4. Change the SixthChannel unit to 'mA'
+",,"1. SecondChannel,ThirdChannel,FourthChannel parameters are unchecked, TwelifthChannel name edited and Refresh time changed to 2000
+2.SixthChannel unit appeared as 'mA'
+3. There should be indication of unsaved changes and Set Default button should be Enabled.
+"
+Save the configuration by clicking the Save button in the test configuration,,"# Input and Output settings are Saved.
+# There should not be any indication of unsaved changes and Set Default button should be Disabled."

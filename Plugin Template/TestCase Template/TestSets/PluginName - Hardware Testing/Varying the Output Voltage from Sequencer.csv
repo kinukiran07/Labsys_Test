@@ -1,0 +1,20 @@
+Action,Data,Expected Result
+Summary,Varying the Output Voltage from Sequencer,
+Description,This test case is to check if the PluginName Plugin's output voltage is varied successfully from Sequencer.,
+,,
+# Click Add new Modules button and add a Sequencer Plugin,,# A sequencer plugin will be added.
+"# Click on Add Variable button and add a variable called FirstChannel_In
+# Make it an external variable by linking it to Output channel from PluginName(01) Plugin
+# Configure the default value as 10",,# An External variable with default value as 10 should be added.
+"# Switch to Sequence page. Add the following steps inside the loop step,
+# Add a delay step, with a delay of 5 seconds
+# Add an action step to increment the External variable by the value of 5.
+Example, FirstChannel_In=FirstChannel_In+5",,# Both the steps should be added without any error.
+"# Switch to PluginName(01) Plugin
+# Switch to Channels page
+# In Input Settings, Uncheck the Select all check box
+# In Output Settings, set the Voltage value as 10",,# All the input channels will be deselected.
+"# Click on Start Test button
+# Click Apply & OK in the Meta Data summary window to Start the test execution",,"# Test execution will be started successfully.
+# Only Output Channel will be displayed in the Data Display graph.
+# The Output value will be increased by 5 for every 5 seconds."

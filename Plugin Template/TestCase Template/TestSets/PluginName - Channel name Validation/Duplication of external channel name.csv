@@ -1,0 +1,11 @@
+Action,Data,Expected Result
+Summary,Duplication of external channel name,
+Description,This test will check if the newly edited channel name in PluginName is already used in the any-other plugins or not.,
+,,
+"# Add a sequencer plugin. add a new variable ""*var*""",,"# A Sequencer(01) with a new variable ""var"" will be created and the plugin will be loaded in the sub panel."
+"# In PluginName(01) plugin, rename the Output channel *Output* to *var* by editing it.  ",," 1. A pop will come displaying the following Channel ""var"" is used in another plugin sequencer also suggestion will come saying Channel names should be unique.
+
+2. On clicking OK in the pop up the channel name will be reverted back to *Output*."
+"# In PluginName(01) plugin, rename the Input channel *FourthChannel* to *var* by editing it.  ",,"1. A pop will come displaying the following Channel ""var"" is used in another plugin sequencer also suggestion will come saying Channel names should be unique.
+
+2. On clicking OK in the pop up the channel name will be reverted back to *FourthChannel*."

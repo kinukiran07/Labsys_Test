@@ -1,0 +1,22 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes Indication While Editing the interface parameters,
+Description,This test case is to check the behavior of unsaved changes indication and set default functionality while editing the PluginName interface parameters.,
+,,
+"1.Click on the ADD module button and select the ""PluginName (01)""",,"1. The PluginName (01) Plugin will be added into Test configuration.
+2. There should be indication of unsaved changes and Set Default button should be disabled."
+"In Interface page, Enter Device ID: 198.128.1.100.",,"1. PluginName (01) Device IP will shown.
+2.There should be indication of unsaved changes and Set Default button should be enabled."
+Edit the Timeout to 3000,,"1. PluginName (01) Newly entered Time out will shown.
+2. There should be indication of unsaved changes and Set Default button should be Enabled."
+1. Click on Set Default,,"1. Device IP will empty and Timeout will 5000.
+2. There should be indication of unsaved changes and Set Default button should be disabled."
+"In Interface page,
+1. Enter Device ID: 198.128.1.100.
+2. Edit the Timeout to 3000",,"1. PluginName (01) Device IP will shown  and Time Out will 3000.
+2. There should be indication of unsaved changes and Set Default button should be Enabled."
+Save the configuration by pressing save button.,,1. There should not be any indication of unsaved changes and Set Default button should be Disabled.
+"Edit the Device IP. 198.168.1.100
+Edit the Time out 4000",,"1. PluginName (01) Device IP will shown to 198.168.1.100 and Time Out will 4000.
+2. There should be indication of unsaved changes and Set Default button should be Enabled."
+1. Click on set default,,"1. PluginName (01) Device IP will Reverted to 198.128.1.100 and Time Out will 3000.
+2. There should not be any indication of unsaved changes and Set Default button should be Disabled."

@@ -1,0 +1,22 @@
+Action,Data,Expected Result
+Summary,Consistency Check & Execute Layer Error during Quick Test,
+Description,This test case is to check if the consistency check is done properly before performing a quick test or starting the test execution,
+,,
+1. Add a PluginName (01) Plugin using the Add Modules button,,"1. The PluginName (01)  plugin will be added.
+2. By default the interface page will be shown and the Device IP will be empty."
+"1. Switch to Channels Page
+2. Uncheck the Enable Output in Output Settings
+3. Uncheck the Select All in Input Settings",,All the channels are de-activated.
+"1. Switch to Test Page
+2. Click ""Test"" button",,"A message popup will appear with the message,
+""Configure a Valid Device IP Address
+Activate atleast one channel"""
+"1. Switch to Channels Page
+2. Enable the Output Channel
+3. Switch to Test Page
+4. Click ""Test"" button",,"A message popup will appear with the message,
+""Configure a Valid Device IP Address"""
+"1. Switch to Interface Page
+2. Set Device IP as 10.81.3.128 (Dummy IP Address)
+3. Switch to Test Page
+4. Click ""Test"" button",,1. Quick Test will be performed and Execute layer error will be displayed in the Status bar since there is no real hardware.

@@ -1,0 +1,36 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes Indication While Editing the Input Settings,
+Description,This test case is to check the behavior of unsaved changes indication and set default functionality while editing the Input Settings.,
+,,
+"1. Click PluginName (01) Plugin. 
+2. Select the channel Page.",,"# The PluginName (01) Plugin will be loaded.
+ # There should not be any indication of unsaved changes and Set Default button should be disabled."
+Uncheck the Select all in the Input settings,,"# All Channel are Unchecked.
+# There should be indication of unsaved changes and Set Default button should be Enabled.
+"
+check the Select all in the Input settings,,"# All Channel are checked.
+# There should not be any indication of unsaved changes and Set Default button should be Disabled
+"
+"1. Uncheck the 
+SecondChannel,
+ThirdChannel,
+FourthChannel
+2. Edit the TwelfthChannel name to PowerInput
+3. Edit the Refresh time to 2000
+4. Change the SixthChannel unit to 'mA'",,"1. SecondChannel,ThirdChannel,
+FourthChannel parameters are unchecked, TwelfthChannel name edited and Refresh time changed to 2000
+2.SixthChannel unit appeared as 'mA'
+3. There should be indication of unsaved changes and Set Default button should be Enabled.
+
+"
+Click on Set default,,"1. Revert the Input channel settings.
+2. There should not be any indication of unsaved changes and Set Default button should be Disabled"
+"1. Uncheck the SecondChannel,
+FourthChannel.
+2. Edit the TwelfthChannel name to PowerInput
+3. Edit the Refresh time to 2000
+4. Change the SixthChannel unit to 'mA'",,"1. Input settings are edited.
+2. There should be indication of unsaved changes and Set Default button should be Enabled.
+"
+Save the configuration by clicking the Save button in the test configuration,,"# Input settings are Saved.
+# There should not be any indication of unsaved changes and Set Default button should be Disabled"

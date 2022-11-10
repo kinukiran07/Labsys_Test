@@ -1,0 +1,41 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes Indication While Edit Input Channel Scale settings,
+Description,This test case is to check the behavior of unsaved changes indication and set default functionality while editing the input channel scale settings in PluginName Plugin,
+,,
+"# Add PluginName (01) Plugin in the Test configuration.
+# Click on Set Scale Button
+# Select ThirdChannel
+# Change Raw Minimum from 0 to 10 and Raw Maximum from 0 to 100
+# Click on Ok",,"# PluginName (01) Will be highlighted with Unsaved changes notification and set Default Enabled.
+# Set Scale Button color will not be changed."
+Press Set Default button,,"# Setscale previous setting reverted.
+# PluginName (01) Will be highlighted with Unsaved changes notification
+# Setdefault button will disabled.
+# Set Scale Button color will not be changed."
+"1. Click on  Set Scale Button.
+2. Select SecondChannel
+3. Change Output minimum 0 to 10,
+Output Maximum to 0 to 100.
+4. Click OK.",,# PluginName (01) Will be highlighted with Unsaved changes notification and Set default Button Enabled.
+Save the configuration by pressing save configuration button ,,# PluginName (01) Will not be highlighted with Unsaved changes notification and Set default Button disabled.
+"# Click on Set Scale Button
+# Select SecondChannel
+# Change Raw Minimum from 0 to 10 and Raw Maximum from 0 to 100
+# Click on Ok ",,"# PluginName (01) Will be highlighted with Unsaved changes notification and set Default Enabled.
+# Set Scale Button color will not be changed."
+"# Click on Set Scale Button
+# Select SecondChannel
+# Select Unit 'A' in ring control.
+# Click on Ok ",,"# PluginName (01) Will be highlighted with Unsaved changes notification and set Default Enabled.
+# Set Scale Button color will not be changed."
+"# Click on Set Scale Button
+# Select SecondChannel
+# Check the 'Set scale active'
+# Click on Ok.",,"# PluginName (01) Will be highlighted with Unsaved changes notification and set Default Enabled.
+# Set Scale Button color will be changed."
+Switch to Channel Overview.,,"# PluginName (01) Will be highlighted with Unsaved changes.
+# SecondChannel appear with the Raw range[10..100], Output range [10..100] Set scale checked."
+"# Select 'PluginName (01)'.
+# Save the configuration.
+",,"# PluginName (01) Will not be highlighted with Unsaved changes notification and set Default Disabled.
+# Set Scale Button Still highlighted with color."

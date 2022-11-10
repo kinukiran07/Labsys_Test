@@ -1,0 +1,45 @@
+Action,Data,Expected Result
+Summary,PluginName-End to end testing,
+Description,"End to end , PluginName is tested with its basic functionalities",
+,,
+"Create a new XML Test Configuration file by 
+choosing ""File -> New configuration...""",,"If there are any unsaved changes, then ""Unsaved Changes"" window will 
+appear, asking whether to save or discard the changes. Then a file dialog to 
+enter the file name for new configuration will appear
+      -> If no unsaved changes, then file dialog will appear
+      -> A new configuration file will be created based on the file name configured"
+"1. Click on ""Add new module""
+2. Select ""PluginName"" 
+3. Click ""OK""",,"A new plugin is added in configuration menu.
+A new plugin is highlighted with red colour indication notifying unsaved."
+"Select the VISA Resource Name
+Note: If a hardware is present, select a valid VISA resource else, configure a dummy VISA",,"If valid hardware is selected, corresponding interface settings will be displayed."
+"
+1. Switch to the Channels page
+2.Click on ""Enable Weight Exponential Filter""",,"Weight Exponential Filter is Disabled.
+
+"
+"1.Switch to test page
+2.Click the Test button",,"If the hardware is not selected following error will occurs
+Error [500700] Occurred at: Test Kern-> Init
+*Possible reason(s):* PluginName (01) No data to read!
+If an valid hardware is selected hence, the correct measurement data should be observed in the Test Results table"
+Select the channel overview,,"The Weight,WeightAvg and WeightGrad are displayed with its colour,Line Style,Line width,Axis,unit,refresh time,raw range and scaled range."
+"1.Change the axis of Weight to ""Y3""in channel overivew
+2.Disable the WeightAvg in checkbox button.
+",,Whatever the changes made in channel overview should be reflected.
+Click the test execution button,,Meta data summary window will be displayed.
+"Click Apply button and then OK to start the test
+execution",,"The axis of the Weight is in Y3.
+Data display page is displayed.
+Error [500700] Occurred at: PluginName (01)-> Execute
+Possible reason(s): PluginName No data to read!
+"
+"1.Click Stop button
+2. Select OK button
+3.Select ""open log file in NI DIAdem?""",,"Data Viewer is displayed with overview of the graphical representation of the channels
+*Note:* The axis of the Weight is in Y3
+DIAdem is opened and the values should be same as in data viewer."
+Click file menu and save configuration.,,The xml file is saved .
+Reopen the Application .,,"1. The Application will be reopened successfully.
+2. The Changes done in PluginName (01) in *Step #3* & *#4* and Channel Overview in *Step #7* should be retained."

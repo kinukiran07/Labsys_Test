@@ -1,0 +1,26 @@
+Action,Data,Expected Result
+Summary,Quick Test from PluginName Plugin's Test Page,
+Description,This test case is to check if the Test Page in the PluginName plugin is working as expected.,
+,,
+Switch to Channels Page,,1. The Output Channel & all the Input Channels has to be enabled.
+"Configure the following in Output Settings,
+1. Channel Name -> Output_Test
+2. Mode -> AC Voltage
+3. Unit -> V
+4. Voltage -> 3.5
+5. Frequency -> 100
+Enable only the following Measurement Channels,
+1. FirstChannel
+2. FourthChannel
+3. SeventhChannel &
+4. TwelfthChannel",,1. Only 5 Channels will be activated in the Plugin.
+"1. Switch to Test Page
+2. Click on ""Test"" button",,"# PluginName (01) Channel Names, Value, Unit, Timestamp and Result are updated in Test Result table.
+ # The output from Instrument should match with the Configuration done in Step #2 (Verify using a DMM or Scope)
+2. The Input values of FirstChannel, FourthChannel, SeventhChannel & TwelfthChannel should be correct (These parameters should be generated from a known source)"
+"# Open the scaling settings dialog
+ # Assign a scaling function to the first channel and check the scaling active box
+ # Assign a lookup table to the second channel and check the scaling active box
+ # Close the scaling settings dialog with the OK button
+ # Click the test button",,"# No error occurs
+ # The altered scaling settings for the respective channels are applied correctly."

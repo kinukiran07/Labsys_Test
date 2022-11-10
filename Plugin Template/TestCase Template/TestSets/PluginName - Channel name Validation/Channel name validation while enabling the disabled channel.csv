@@ -1,0 +1,35 @@
+Action,Data,Expected Result
+Summary,Channel name validation while enabling the disabled channel,
+Description,This test is to check the channel validation while enabling the disabled channel.,
+,,
+"# In PluginName(01) uncheck the enable output
+ # Rename any input channel to Output
+ # Check the enable output ",,"# The following error is generated and it will be displayed in the status bar
+ ** Error [500402] Occurred at: PluginName(01) --> Activating Output Channel(s)Possible reason(s): The following Channel Name[s] is already used in the current Plugin. 
+Output
+
+Suggestion: Channel Names should be unique.
+VI Call Chain: Error [500402] occurred at PluginName.lvlib:PluginName_UI.lvclass:PluginName_UI.vi:6780009
+ "
+"# In PluginName(01) uncheck the input channel SecondChannel.
+ # Rename the input channel FirstChannel as SecondChannel 
+ # Check the input channel SecondChannel again",,"# The following error is generated and it will be displayed in the status bar
+ ## Error [500401] Occurred at: PluginName(01) --> Activating Input Channel(s)
+ Possible reason(s): The following Channel Name[s] is already used in the current Plugin. 
+ SecondChannel
+
+Suggestion: Channel Names should be unique.
+ VI Call Chain: Error 500401 occurred at PluginName. lvlib:PluginName.lvclass:Update Input Channel Active Status.vi:1540019
+ # The cursor will move to 2 nd column of the table Input settings [ Indicating the user to edit]"
+"# Click Set default
+ # Clear the error in status bar.",,"# All the edited channel names will be reverted back to initial names and the check boxes will be reverted back to the initial states.
+ # The error in the status bar will be cleared. "
+"# Uncheck the Select all 
+ # Rename the output channel from Output to Voltage
+ # Check the Select all ",,"# The following error will be generated and it will be displayed in the status bar.Error [500401]Occurred at: PluginName(01) --> Activating Input Channel(s)
+Possible reason(s): The following Channel Name[s] is already used in the current Plugin. 
+SecondChannel
+
+Suggestion: Channel Names should be unique.
+VI Call Chain: Error 500401 occurred at PluginName.lvlib:PluginName.lvclass:Update Input Channel Active Status.vi:1540020
+ "

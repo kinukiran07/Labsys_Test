@@ -1,0 +1,41 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes while loading a Plugin from xml,
+Description,This Test case is to check the behavior of the set default functionality and unsaved changes indication when PluginName plugin is loaded from XML.,
+,,
+"# Launch the application
+ # Open XML Test Configuration file by that was saved in pre-condition by choosing ""File -> Open configuration...""
+ -> If there are any unsaved changes, then ""Unsaved Changes"" window will appear, asking whether to save or discard the changes. Then a file dialog to enter the file name for new configuration will appear
+ -> If no unsaved changes, then file dialog will appear
+ -> The chosen configuration file will be loaded
+ # Click PluginName (01) Plugin. ",,"# The PluginName (01) Plugin will be loaded.
+ # The PluginName (01) Plugin will not be highlighted in Red color and no*, indicating the unsaved changes
+ # The Set Default button will be disabled."
+"1. In Interface page, 
+ a. Enter Device ID: 198.128.1.100.
+ b. Edit the Timeout to 3000
+2. Switch to Channel page
+ Edit the Output setting
+a. Unchecked the Enable Out.
+b. Change the channel name to PluginName_VoltageOUT
+c. Change Mode to AC voltage
+d. Voltage: 2
+e. Unit to 'mV'
+f. Frequency(Hz): 60
+3.Change the Input Settings
+a. Uncheck the 
+SecondChannel,
+ThirdChannel,
+FourthChannel
+b. Edit the TwelfthChannel name to PowerInput
+c. Edit the Refresh time to 2000
+d. Change the SixthChannel unit to 'mA'
+4. Save the configuration by pressing the Save button.",,"#  Changed parameter appear in the Plugin.
+# The PluginName (01) Plugin will be highlighted in Red color and no*, indicating the unsaved changes
+# The Set Default button will be Enabled.
+"
+Save the configuration by pressing the Save button.,,"# Changed Parameters are Saved.
+# There should not be any indication of unsaved changes and Set Default button should be Disabled"
+"1. Go to menu and select  File -> Open Configuration.
+2. Open XML Test Configuration file by that was saved in Step 3.",,"# The PluginName (01) Plugin will be loaded.
+ # The PluginName (01) Plugin will not be highlighted in Red color and no*, indicating the unsaved changes
+ # The Set Default button will be disabled."

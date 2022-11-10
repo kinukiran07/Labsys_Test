@@ -1,0 +1,45 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes Indication While Editing the Output Settings,
+Description,This test case is to check the behavior of unsaved changes indication and set default functionality while editing the Output Settings in Channel page.,
+,,
+"1. Click PluginName (01) Plugin. 
+2. Select the channel Page.",,"# The PluginName (01) Plugin will be loaded.
+ # There should not be any indication of unsaved changes and Set Default button should be disabled."
+"In Output Settings,
+1. Unchecked the Enable Out.
+2. Change the channel name to PluginName_VoltageOUT
+3. Change Mode to AC voltage
+4. Voltage: 2
+5. Unit to 'mV'
+6. Frequency(Hz): 60",,"# newly entered parameters have appeared in the Output settings.
+ # There should be an indication of unsaved changes and Set Default button should be enabled."
+"In Output Settings,
+1. checked the Enable Out.
+2. Change the channel name to Output
+3. Change Mode to DC voltage
+4. Voltage: 1
+5. Unit to 'V'
+","Unsaved changes are not removed on the Plugin.
+Because the Frequency is not reverted to 60 Hz.
+Unsaved changes indication is expected.","# Output settings are reverted by editing the parameters
+# There should  be indication of unsaved changes and Set Default button should be enabled."
+"In Output Settings,
+1. Unchecked the Enable Out.
+2. Change the channel name to PluginName_VoltageOUT
+3. Change Mode to AC voltage
+4. Voltage: 2
+5. Unit to 'mV'
+6. Frequency(Hz): 60",,"# newly entered parameters are appeared in the Output settings. 
+# There should be indication of unsaved changes and Set Default button should be enabled."
+1. Click on set default,,"# Output settings are reverted.
+# There should not be any indication of unsaved changes and Set Default button should be Disabled"
+"In Output Settings,
+1. Unchecked the Enable Out.
+2. Change the channel name to PluginName_VoltageOUT
+3. Change Mode to AC voltage
+4. Voltage: 2
+5. Unit to 'mV'
+6. Frequency(Hz): 60",,"# newly entered parameters are appeared in the Output settings. 
+# There should be indication of unsaved changes and Set Default button should be enabled."
+Save the configuration by clicking the Save button in the test configuration,,"# Output settings are Saved.
+# There should not be any indication of unsaved changes and Set Default button should be Disabled."

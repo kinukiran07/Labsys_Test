@@ -1,0 +1,59 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes Indication While Switch between Plugins,
+Description,This test case is to check the behavior of unsaved changes indication and set default functionality for PluginName while Switch between Plugins.,
+,,
+"1. Go to channel Page
+In Output Settings,
+1. Unchecked the Enable Out.
+2. Change the channel name to PluginName_VoltageOUT
+3. Change Mode to AC voltage
+4. Voltage: 2
+5. Unit to 'mV'
+6. Frequency(Hz): 60",,"1. newly entered parameters are appeared in the Output settings.
+2. There should be indication of unsaved changes and Set Default button should be enabled."
+"1. By using ""Add module"" button add a Sequencer plugin ",,"1. Sequencer plugin is added to the configuration tree and it will be loaded.
+2. Unsaved changes present in the PluginName (01) name."
+Switch to PluginName (01) plugin. ,,There should be indication of unsaved changes and Set Default button should be enabled in PluginName (01)
+Click on Set Default,,"# Output settings are reverted.
+# There should not be any indication of unsaved changes and Set Default button should be Disabled."
+"1. Uncheck the 
+SecondChannel,
+ThirdChannel,
+FourthChannel
+2. Edit the TwelfthChannel name to PowerInput
+3. Edit the Refresh time to 2000
+4. Change the SixthChannel unit to 'mA'",,"1. SecondChannel,ThirdChannel,FourthChannel parameters are unchecked, TwelfthChannel name edited and Refresh time changed to 2000
+2.SixthChannel unit appeared as 'mA'
+3. There should be indication of unsaved changes and Set Default button should be Enabled.
+"
+Switch to metadata Page,,"1. Metadata page loaded in the sub-panel
+2. Unsaved changes present in the PluginName (01) name."
+Switch to PluginName (01) plugin. ,,There should be indication of unsaved changes and Set Default button should be enabled in PluginName (01)
+"1. In interface page,
+Edit Device IP: 198.168.1.100
+2. Change the Output channel name to 'New'",,"1. New Parameter are entered.
+2. There should be indication of unsaved changes and Set Default button should be enabled in PluginName (01)"
+"Switch to Sequencer
+1. Add Variale 'Output'
+2. Add one more Variable 'Power'
+",,"1. There should be indication of unsaved changes in the PluginName (01) and Sequencer.
+"
+Switch to PluginName (01) Plugin and Click on the set default.,,"1. The following error displays in the status bar
+Error [-1200] Occurred at: PluginName (01) --> Set Default
+Possible reason(s): The following Channel Name(s) is used in another Plugins
+
+""Output"" is used in ""Sequencer (01)"".
+""Power"" is used in ""Sequencer (01)"".
+Suggestion: Channel Names should be unique.
+VI Call Chain: Error -1200 occurred at PluginName (01).lvlib:PluginName (01)_UI.lvclass:PluginName (01)_UI.vi:6780001
+2. Set default operation will be aborted ie no changes in the PluginName (01) plugin , the IP remains in 198.168.1.100.
+3. There should be indication of unsaved changes and Set Default button should be enabled in PluginName (01)"
+"Switch to sequencer,
+Delete the 'Output' and 'Power' Variable in the Channel variable Map",,"1. Unsaved changes still show in the Sequencer.
+2. Set default will disabled."
+Switch to PluginName (01) Plugin and Click on the set default.,,"1. Input and Output Setting are reverted 
+2. Device IP Revert to the 198.128.1.100
+3 . There should not be any indication of unsaved changes in the PluginName (01) and set default should disabled.
+4. Error cleared in the Status bar.
+ 
+"

@@ -1,0 +1,5 @@
+Action,Data,Expected Result
+Summary,Read Device Meta Data Configuration Details,
+Description,This Test case is to read the Read Device Meta Data Configuration Details of PluginName,
+,,
+# Click on Read Device Meta Data Configuration Icon,,"# Firmware, Manufacturer, Model Number & Serial Number of the PluginName(01) instrument should be displayed in Device Meta Data cluster."

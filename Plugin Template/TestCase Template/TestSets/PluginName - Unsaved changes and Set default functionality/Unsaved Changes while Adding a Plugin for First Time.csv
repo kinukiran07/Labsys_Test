@@ -1,0 +1,56 @@
+Action,Data,Expected Result
+Summary,Unsaved Changes while Adding a Plugin for First Time,
+Description,This Test case is to check the behavior of the set default functionality and unsaved changes indication when PluginName plugin is added for the first time.,
+,,
+"1.Click on the ADD module button and select the ""PluginName (01)""",,"1. The PluginName (01) Plugin will be added into Test configuration.
+2. There should be indication of unsaved changes and Set Default button should be disabled."
+"In Interface page, 
+1. Enter Device ID: 198.128.1.100.
+2. Edit the Timeout to 3000",,"1. PluginName (01) Device IP will shown and new Timeout will Updated.
+2.There should be indication of unsaved changes and Set Default button should be enabled."
+Click on Set default,,"1. PluginName (01) Device IP will Empty and new Timeout will Reverted to 5000.
+2.There should be indication of unsaved changes and Set Default button should be Disabled."
+"Switch to Channel pages
+s, Edit the Output settings 
+1. Unchecked the Enable Out.
+2. Change the channel name to PluginName_VoltageOUT
+3. Change Mode to AC voltage
+4. Voltage: 2
+5. Unit to 'mV'
+6. Frequency(Hz): 60",,"# newly entered parameters are appeared in the Output settings. 
+# There should be indication of unsaved changes and Set Default button should be enabled."
+Click on the Set Default,,"# Output settings are reverted.
+# There should be indication of unsaved changes and Set Default button should be Disabled."
+"Change the Input Settings
+1. Uncheck the 
+SecondChannel,
+ThirdChannel,
+FourthChannel
+2. Edit the TwelfthChannel name to PowerInput
+3. Edit the Refresh time to 2000
+4. Change the SixthChannel unit to 'mA'",,"1. SecondChannel,ThirdChannel,FourthChannel channel parameters are unchecked, TwelifthChannel name edited and Refresh time changed to 2000
+2.SixthChannel unit appeared as 'mA'
+3. There should be indication of unsaved changes and Set Default button should be Enabled."
+Click on the Set Default,,"# input settings are reverted.
+# There should be indication of unsaved changes and Set Default button should be Disabled."
+"1. In Interface page, 
+ a. Enter Device ID: 198.128.1.100.
+ b. Edit the Timeout to 3000
+2. Switch to Channel page
+ Edit the Output setting
+a. Unchecked the Enable Out.
+b. Change the channel name to PluginName_VoltageOUT
+c. Change Mode to AC voltage
+d. Voltage: 2
+e. Unit to 'mV'
+f. Frequency(Hz): 60
+3.Change the Input Settings
+a. Uncheck the 
+SecondChannel,
+ThirdChannel,
+FourthChannel
+b. Edit the TwelfthChannel name to PowerInput
+c. Edit the Refresh time to 2000
+d. Change the SixthChannel unit to 'mA'
+4. Save the configuration by pressing the Save button.",,"# Changed Parameters are Saved.
+# There should not be any indication of unsaved. Changes and Set Default button should be Disabled."

@@ -1,0 +1,22 @@
+Action,Data,Expected Result
+Summary,Check Channel selection in Scale settings window,
+Description,"
+This test case is to check if the selected channel in the channel tab of the PluginName(01) plugin is displayed in the scale setting window if the scale setting button is clicked.",
+,,
+"# Press channel tab in  PluginName(01) 
+ # Select the Channel Name SixthChannel
+ # Press Set Scaling button",,"# In the pop up, in the control channels SixthChannel will be selected and its respecting scaling details will be displayed."
+"# In the scaling settings, window select the channel ThirteenthChannel
+ # Select the scaling type as Function, add an expression and check the scaling active box
+ # Reselect the channel as FirstChannel
+ # Click Ok",,"# The window will be closed.
+ # Set scaling button color will be green."
+"# In channels tab, select the ThirteenthChannel, click set scaling",,# In the scaling window the channel ThirteenthChannel should be selected and the scaling type function and the expression which was given in step 2 should also be displayed.
+"# Click ok and close the scaling window
+ # Unselect/Disable the channel  TwelfthChannel.
+ # Ensure the channel TwelfthChannel is highlighted 
+ # Click Set Scaling Button.",,# The channel FirstChannel Will be displayed in the Channel since the channel TwelfthChannel is disabled.
+"# Click ok and close the scaling window
+ # Unselect/Disable the channel FirstChannel.
+ # Click the  TwelfthChannel row, Ensure the channel TwelfthChannel is highlighted and this channel is still disabled
+ # Click Set Scaling Button.",,# The channel SecondChannel Will be displayed in the Channel since both the selected channel TwelfthChannel and the first channel FirstChannel are disabled or unchecked.

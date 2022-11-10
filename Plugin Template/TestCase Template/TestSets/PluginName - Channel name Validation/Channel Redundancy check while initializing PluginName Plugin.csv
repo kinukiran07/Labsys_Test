@@ -1,0 +1,38 @@
+Action,Data,Expected Result
+Summary,Channel Redundancy check while initializing PluginName Plugin,
+Description,This test is to check if the channel names in PluginName Plugin are unique while initializing it in different scenario.,
+,,
+"Click the Add button in test configuration.
+Select PluginName(01) and click Add.",,"# The plugin""PluginName(01)"" will be added in the configuration tree.
+ # PluginName(01) panel will be loaded.
+ # In Channels page default unique channel names will be present as shown in the attachment  "
+"# Again Click the Add button in test configuration.
+ # Select PluginName(01) and click Add.",,"# The plugin""PluginName(02)"" will be added in the configuration tree.
+ # PluginName(02) panel will be loaded.
+ # In Channels page default unique channel names will be present as shown in the attachment  "
+"# Click PluginName(01) Plugin and From Menu bar select Favouties and select Export 
+ # Save this as ""PluginName(01) Export""",,1.A new xml with plugin PluginName(01) is created.
+"# From Menu bar, select Import and select the file ""PluginName(01) Export"" 
+ # In the pop up select PluginName(01) Plugin and select Add
+ # Select Add new in the next pop up.",,1. A new PluginName(03) Plugin with unique channel names are created. Refer the attachment.
+"# Save the configuration as *PluginName(01) Plugin init* .
+ # Crate a new configuration as ""*PluginName(01) Import Replace.xml*"" add PluginName(01) plugin and edit all the channel names as shown in the attachment.",,# A new xml with a plugin PluginName(01) with the edited channel names is created. 
+"# Click Channel Redundancy check while initializing PluginName(01) Plugin and From Menu bar select Favouties and select Export 
+ # Save this as ""PluginName(01) Export Replace""
+# Save Configuration",,1.A new xml with plugin PluginName(01) is created.
+"# Open the xml *PluginName(01) Plugin init* from File–> Open Configuration.
+ # Note the channels in PluginName(01) plugin.
+ # Press Ctrl+I and select *PluginName(01) Export Replace* xml and select PluginName(01) click add and Replace in the successive pop ups.",,# The plugin PluginName(01) will be replaced and the unique channel names should create. Refer the attachment.  
+"# Save the configuration.
+ # Click the Add button in Test configuration.
+ # Press control and select PluginName(01) , Kern, Average, Sartorius and Sequencer.
+ # Click Add button.
+ # Click PluginName(04) and save the configuration.",,"# The plugins PluginName(04) Kern (01), Sartorius (01), Average (01) and Sequencer (01) will be added in the configuration tree.
+ # PluginName(04) panel will be loaded.
+ # In Channels page default channel names and parameters will be present as shown in the attachment  "
+"# Press Ctrl+O and select *PluginName(01)Import Replace.xml*
+ # Select PluginName(01) plugin ",,"# The *PluginName(01)Import Replace.xml* will be loaded in Labsys
+ # The plugin *PluginName(01)* will be loaded in the subpanel.
+ # In the channels tab, the channel names in the xml should retain. "
+"# Stop the application 
+ # Launch again and Select *PluginName(01)* plugin. ",,"# Labsys should relaunch , in *PluginName(01)* the channel name should retain as in the xml. "

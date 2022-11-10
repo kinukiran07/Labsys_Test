@@ -1,0 +1,11 @@
+Action,Data,Expected Result
+Summary,PluginName - Channel name validation while resetting plugin,
+Description,This test case tests whether channel duplication error is generated for inactive channel names while resetting plugin,
+,,
+"# Uncheck 'FifthChannel' and 'ThirdChannel' channels in channels tab
+ # Save the configuration
+ # Add Sequencer plugin
+ # Add two new internal variables 'FifthChannel' & 'ThirdChannel'
+ # Switch to PluginName(01) plugin
+ # Uncheck 'FourthChannel' channel
+ # Click 'Set Default' button",,No consistency check error is generated.

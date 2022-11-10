@@ -1,0 +1,74 @@
+Action,Data,Expected Result
+Summary,Check Scale Active Functionality,
+Description,This test case is to check the set scale functionality of PluginName Plugin,
+,,
+"# Click on Set Scale Button
+# Select ThirdChannel
+# Change Raw Minimum from 0 to 10 and Raw Maximum from 1 to 100
+# Click on Ok",,"# PluginName(01) Will be highlighted with Unsaved changes notification.
+# Channel Overview Will be highlighted with Unsaved changes notification.
+# Set Scale Button color will not be changed."
+# Switch to Channel Overview,,# PluginName(01).ThirdChannel Raw range will be [10..100]
+"# Click on PluginName(01)  Plugin
+# Click on Set Scale Button
+# Select ThirdChannel
+# Change Raw Minimum from 10 to 0 and Raw Maximum from 100 to 1
+# Click on Ok",,"# PluginName(01)  Will not be highlighted with Unsaved changes notification.
+# Channel Overview Will not be highlighted with Unsaved changes notification.
+# Set Scale Button color will not be changed."
+# Switch to Channel Overview,,# PluginName(01).ThirdChannel Output range will be [0..1]
+"# Click on PluginName(01) Plugin
+# Click on Set Scale Button
+# Select SecondChannel
+# Change Output Minimum from 0 to 10 and Output Maximum from 1 to 100
+# Click on Ok",,"# PluginName(01)  Will be highlighted with Unsaved changes notification.
+# Channel Overview Will be highlighted with Unsaved changes notification.
+# Set Scale Button color will not be changed."
+"# Switch to Channel Overview
+# Save Configuration",,# PluginName(01).SecondChannel Scaled range will be [10..100]
+"# Click on PluginName(01)  Plugin
+# Click on Set Scale Button
+# Select FourthChannel
+# Change Output Unit to A
+# Click on Ok",,"# PluginName(01)  Will be highlighted with Unsaved changes notification.
+# Channel Overview Will be highlighted with Unsaved changes notification.
+# Set Scale Button color will not be changed.
+# FourthChannel unit will be changed to A."
+# Switch to Channel Overview,,# PluginName(01).FourthChannel Unit will be A.
+"# Click on PluginName(01)  Plugin
+# Click on Set Scale Button
+# Select FourthChannel
+# Change Output Unit to Irms
+# Click on Ok",,"# PluginName(01)  Will  not be highlighted with Unsaved changes notification.
+# Channel Overview Will not be highlighted with Unsaved changes notification.
+# Set Scale Button color will not be changed.
+# FourthChannel unit will be changed to Irms."
+# Switch to Channel Overview,,# PluginName(01).FourthChannel Unit will be Irms
+"# Click on PluginName(01)  Plugin
+# Click on Set Scale Button
+# Select FirstChannel
+# Set Scale Active
+# Click on Ok",,"# PluginName(01)  Will be highlighted with Unsaved changes notification.
+# Channel Overview Will be highlighted with Unsaved changes notification.
+# Set Scale Button color will be changed."
+# Switch to Channel Overview,,# PluginName(01).FirstChannel set scale should be active
+"# Click on PluginName(01) Plugin
+# Click on Set Scale Button
+# Select FirstChannel
+# Uncheck Set Scale Active
+# Click on Ok",,"# PluginName(01)  Will be highlighted with Unsaved changes notification.
+# Channel Overview Will be highlighted with Unsaved changes notification.
+# Set Scale Button color will not be changed."
+# Switch to Channel Overview,,# PluginName(01).FirstChannel set scale should not be checked
+"# Click on PluginName(01)  Plugin
+# Click on Set Scale Button
+# Select FirstChannel
+# Set Scale Active
+# Click on Ok",,"# PluginName(01)  Will be highlighted with Unsaved changes notification.
+# Channel Overview Will be highlighted with Unsaved changes notification.
+# Set Scale Button color will be changed."
+Save Configuration,,"# PluginName(01)  Will not be highlighted with Unsaved changes notification.
+# Channel Overview Will not be highlighted with Unsaved changes notification.
+# Set Scale Button color will be changed."
+"# Close and Relaunch the application
+# Click on PluginName(01) ",,# Set Scale Button color will be changed.

@@ -1,0 +1,1 @@
+This Test Set is to check the Scale Active functionality
